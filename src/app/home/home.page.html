@@ -1,20 +1,140 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+<ion-content>
+<ion-header style="border: none; box-shadow: none;">
+  <ion-toolbar color="white">
+    <ion-buttons slot="start">
+      <ion-button color="dark">
+        <ion-icon slot="icon-only" name="camera-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-img class="insta" src="../assets/img/insta.jpg" slot="secondary"></ion-img>
+    <ion-buttons slot="end">
+      <ion-button slot="icon-only" color="dark">
+        <ion-icon name="heart-outline"></ion-icon>
+        <ion-badge color="danger" class="badge">1</ion-badge>
+      </ion-button>
+      <ion-button color="dark">
+        <ion-icon slot="icon-only" name="send-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+  <div class="list-story">
+    <div class="scroll-horizontal">
+      <div class="scroll-item" >
+        <ion-avatar>
+          <img alt="perfil" src="../../assets/img/3.jpg" />
+        </ion-avatar>
+        <svg class="add-icon" width="30" height="30" viewBox="0 0 24 24" style="position: absolute; top: 40px; right: 3px;">
+          <circle cx="12" cy="12" r="10" fill="rgb(26, 96, 220)" />
+          <rect x="11" y="8" width="2" height="8" fill="white" />
+          <rect x="8" y="11" width="8" height="2" fill="white" />
+        </svg>
+        <div class="item-label text-muted">Tu historia</div>
+      </div>
+      <div class="scroll-item" *ngFor="let avatar of avatars">
+        <div class="item-avatar">
+          <ion-avatar class="has-update">
+            <img [src]="avatar.img" alt="{{ avatar.name }}" />
+          </ion-avatar>
+        </div>
+        <div class="item-label">{{ avatar.name }}</div>
+      </div>
+    </div>
   </div>
+
+  <ion-card class="content-publicacion">
+    <ion-card-header class="header-publicacion">
+      <ion-item lines="none">
+        <ion-avatar class="large-avatar">
+          <img alt="Mi foto perfil" src="../../assets/img/3.jpg" />
+        </ion-avatar>
+        <ion-text class="usuario">Manuel</ion-text>
+        <img src="../../assets/img/verificado.png" class="icon-verificado" />
+        <ion-icon name="ellipsis-vertical" slot="end"></ion-icon>
+      </ion-item>
+    </ion-card-header>
+  
+    <ion-card-content class="post1">
+      <ion-img src="../../assets/img/1.jpg" />
+    </ion-card-content>
+  
+    <ion-toolbar class="footer-publicacion">
+      <ion-buttons slot="start">
+        <ion-button fill="clear">
+          <ion-icon name="heart-outline"></ion-icon>
+        </ion-button>
+        <ion-button fill="clear">
+          <ion-icon name="chatbubble-outline"></ion-icon>
+        </ion-button>
+        <ion-button fill="clear">
+          <ion-icon name="send-outline"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+      <ion-buttons slot="end">
+        <ion-button fill="clear">
+          <ion-icon name="bookmark-outline"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  
+    <ion-item lines="none" class="avatar-text-item">
+      <ion-avatar class="avatar-comentario">
+        <img alt="Mi foto perfil" src="../../assets/img/2.jpg" />
+      </ion-avatar>
+      <ion-text class="first-text">Le gusta a Ana y </ion-text>
+      <ion-text class="bold-text"><strong>1000 personas más</strong></ion-text>
+    </ion-item>
+  
+    <ion-text class="first-text"><strong>Manuel</strong> una foto con el #PiojoHerrera
+      <ion-icon name="football" style="color: green;"></ion-icon>
+    </ion-text>
+  
+
+    <ion-text class="comentarios-text">Ver los 97 comentarios</ion-text>  
+    <ion-text>Hace 4 días</ion-text>
+  </ion-card>
 </ion-content>
+  
+<ion-footer class="footer-principal">
+  <ion-toolbar>
+    <ion-title>
+      <ion-row>
+        <ion-col>
+          <ion-buttons>
+            <ion-button>
+              <ion-icon name="home-outline" size="large"></ion-icon>
+            </ion-button>
+          </ion-buttons>
+        </ion-col>
+        <ion-col>
+          <ion-buttons>
+            <ion-button>
+              <ion-icon name="search-outline" size="large"></ion-icon>
+            </ion-button>
+          </ion-buttons>
+        </ion-col>
+        <ion-col>
+          <ion-buttons>
+            <ion-button>
+              <ion-icon name="add-circle-outline" size="large"></ion-icon>
+            </ion-button>
+          </ion-buttons>
+        </ion-col>
+        <ion-col>
+          <ion-buttons>
+            <ion-button>
+              <ion-icon name="play-circle-outline" size="large"></ion-icon>
+            </ion-button>
+          </ion-buttons>
+        </ion-col>
+        <ion-col>
+          <ion-buttons>
+            <ion-button>
+              <ion-icon name="person-circle-outline" size="large"></ion-icon>
+            </ion-button>
+          </ion-buttons>
+        </ion-col>
+      </ion-row>
+    </ion-title>
+  </ion-toolbar>
+</ion-footer>

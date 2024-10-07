@@ -1,27 +1,132 @@
-#container {
-  text-align: center;
 
+ion-toolbar {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.insta{
+ height: 40px; 
+width: 120px;
+position: absolute;
+left: 45%;
+transform: translateX(-50%);
+}
+.badge {
   position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  top: -5px;
+  right: -5px;
+  font-size: 0.5em; 
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
+.list-story{
+  padding: 16px 0 8px;
+  border-bottom: none;
+
+  .scroll-horizontal{
+    padding-left: 16px;
+    white-space: nowrap;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .scroll-horizontal::-webkit-scrollbar {
+    display: none; 
+  }
+
+  .scroll-item{
+    position: relative;
+    display: inline-block;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    text-align: center;
+  }
+
+  .item-label{
+    font-size: 13px;
+    margin-top: 8px;
+  }
+
+  .item-avatar{
+    background-image: url('../../assets/img/actualizacion.jpeg');
+    border-radius: 50%;
+    background-size: contain;
+    padding: 3px;
+  }
+ 
+  }
+
+
+ion-icon {
+  font-size: 24px; 
 }
 
-#container p {
+.content-publicacion {
+  margin: 0 0 0 0;
+  border: none;
+  box-shadow: none;
+}
+
+.header-publicacion {
+  font-size: large;
+  display: flex;
+}
+
+.usuario {
+  font-size: 17px; 
+  margin-left: 10px;
+}
+
+.large-avatar {
+  width: 45px;
+  height: 45px;
+}
+
+.icon-verificado {
+  margin-left: 5px;
+  width: 20px;
+  height: 20px;
+}
+
+.post1 {
+  padding: 0;
+}
+
+.footer-publicacion {
+  padding: 10px 15px;
+}
+
+.footer-publicacion ion-icon {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.first-text {
+  font-size: 18px; 
+  color: black;
+  margin-bottom: 0;
+}
+
+.bold-text {
+  font-size: 16px; 
+  font-weight: bold;
+}
+
+.avatar-comentario {
+  width: 25px;
+  height: 25px;
+  margin-right: 10px;
+}
+
+.comentarios-text {
+  display: block;
+  margin-top: 5px;
+  color: grey;
   font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
 }
 
-#container a {
-  text-decoration: none;
+.footer-principal{
+  border: none;
+  box-shadow: none;
 }
